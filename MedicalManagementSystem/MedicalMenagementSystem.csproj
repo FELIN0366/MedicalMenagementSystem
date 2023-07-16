@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D477C6EF-0FFB-4C88-9FD2-000ED273A820}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MedicalMenagementSystem</RootNamespace>
+    <AssemblyName>MedicalMenagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>84FEDA780FB503EC57C234B4E0ADF65469A4CD5A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MedicalMenagementSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AipSdk, Version=4.15.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Baidu-AI.4.15.6\lib\net45\AipSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appointmentModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appointmentModification.Designer.cs">
+      <DependentUpon>appointmentModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chatroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chatroom.Designer.cs">
+      <DependentUpon>chatroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createAccountDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createAccountDoctor.designer.cs">
+      <DependentUpon>createAccountDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createAccountPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createAccountPatient.designer.cs">
+      <DependentUpon>createAccountPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctorAccountModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctorAccountModification.designer.cs">
+      <DependentUpon>doctorAccountModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctorVisitPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctorVisitPatient.designer.cs">
+      <DependentUpon>doctorVisitPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="faceRecognitionRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faceRecognitionRegistration.Designer.cs">
+      <DependentUpon>faceRecognitionRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="faceRecognitionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faceRecognitionUpdate.Designer.cs">
+      <DependentUpon>faceRecognitionUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginAdministrator.designer.cs">
+      <DependentUpon>frmLoginAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginDoctor.designer.cs">
+      <DependentUpon>frmLoginDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginPatient.designer.cs">
+      <DependentUpon>frmLoginPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalRecordDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalRecordDetail.Designer.cs">
+      <DependentUpon>MedicalRecordDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecordsModyfication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicalRecordsModyfication.designer.cs">
+      <DependentUpon>medicalRecordsModyfication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="navigatorAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="navigatorAdministrator.designer.cs">
+      <DependentUpon>navigatorAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="navigatorDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="navigatorDoctor.designer.cs">
+      <DependentUpon>navigatorDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="navigatorPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="navigatorPatient.designer.cs">
+      <DependentUpon>navigatorPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patientAccountModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patientAccountModification.designer.cs">
+      <DependentUpon>patientAccountModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registrationPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrationPatient.designer.cs">
+      <DependentUpon>registrationPatient.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="appointmentModification.resx">
+      <DependentUpon>appointmentModification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chatroom.resx">
+      <DependentUpon>chatroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createAccountDoctor.resx">
+      <DependentUpon>createAccountDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createAccountPatient.resx">
+      <DependentUpon>createAccountPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctorAccountModification.resx">
+      <DependentUpon>doctorAccountModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctorVisitPatient.resx">
+      <DependentUpon>doctorVisitPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faceRecognitionRegistration.resx">
+      <DependentUpon>faceRecognitionRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faceRecognitionUpdate.resx">
+      <DependentUpon>faceRecognitionUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginAdministrator.resx">
+      <DependentUpon>frmLoginAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginDoctor.resx">
+      <DependentUpon>frmLoginDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginPatient.resx">
+      <DependentUpon>frmLoginPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalRecordDetail.resx">
+      <DependentUpon>MedicalRecordDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicalRecordsModyfication.resx">
+      <DependentUpon>medicalRecordsModyfication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="navigatorAdministrator.resx">
+      <DependentUpon>navigatorAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="navigatorDoctor.resx">
+      <DependentUpon>navigatorDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="navigatorPatient.resx">
+      <DependentUpon>navigatorPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patientAccountModification.resx">
+      <DependentUpon>patientAccountModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="registrationPatient.resx">
+      <DependentUpon>registrationPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MedicalMenagementSystem_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
